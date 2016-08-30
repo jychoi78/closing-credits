@@ -42,7 +42,7 @@ StarWars = (function() {
     this.audio = this.el.find('audio').get(0);
 
     // Start the animation
-    this.start = this.el.find('.start');
+    // this.start = this.el.find('.start');
 
     // The animation wrapper
     this.animation = this.el.find('.animation');
@@ -51,11 +51,11 @@ StarWars = (function() {
     this.reset();
 
     // Start the animation on click
-    this.start.bind('click', $.proxy(function() {
-      this.start.hide();
+    // this.start.bind('click', $.proxy(function() {
+      // this.start.hide();
       this.audio.play();
       this.el.append(this.animation);
-    }, this));
+    // }, this));
 
     // Reset the animation and shows the start screen
     $(this.audio).bind('ended', $.proxy(function() {
